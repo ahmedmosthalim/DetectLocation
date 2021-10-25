@@ -14,6 +14,9 @@
 		E219A8EA27263444005D87E5 /* detectLocation.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E219A8E827263444005D87E5 /* detectLocation.xcdatamodeld */; };
 		E219A8EC27263445005D87E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E219A8EB27263445005D87E5 /* Assets.xcassets */; };
 		E219A8EF27263445005D87E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E219A8ED27263445005D87E5 /* LaunchScreen.storyboard */; };
+		E219A8F727263500005D87E5 /* loca.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E219A8F627263500005D87E5 /* loca.jpg */; };
+		E219A8FD27264633005D87E5 /* loca3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E219A8FC27264633005D87E5 /* loca3.jpg */; };
+		E232C9B82726F9D200B5CC85 /* detectLocation.png in Resources */ = {isa = PBXBuildFile; fileRef = E232C9B72726F9D200B5CC85 /* detectLocation.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		E219A8EB27263445005D87E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E219A8EE27263445005D87E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E219A8F027263445005D87E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E219A8F627263500005D87E5 /* loca.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loca.jpg; sourceTree = "<group>"; };
+		E219A8FC27264633005D87E5 /* loca3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loca3.jpg; sourceTree = "<group>"; };
+		E232C9B72726F9D200B5CC85 /* detectLocation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detectLocation.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				E219A8E327263444005D87E5 /* ViewController.swift */,
 				E219A8E527263444005D87E5 /* Main.storyboard */,
 				E219A8EB27263445005D87E5 /* Assets.xcassets */,
+				E219A8F627263500005D87E5 /* loca.jpg */,
+				E219A8FC27264633005D87E5 /* loca3.jpg */,
+				E232C9B72726F9D200B5CC85 /* detectLocation.png */,
 				E219A8ED27263445005D87E5 /* LaunchScreen.storyboard */,
 				E219A8F027263445005D87E5 /* Info.plist */,
 				E219A8E827263444005D87E5 /* detectLocation.xcdatamodeld */,
@@ -130,6 +139,9 @@
 			files = (
 				E219A8EF27263445005D87E5 /* LaunchScreen.storyboard in Resources */,
 				E219A8EC27263445005D87E5 /* Assets.xcassets in Resources */,
+				E219A8F727263500005D87E5 /* loca.jpg in Resources */,
+				E232C9B82726F9D200B5CC85 /* detectLocation.png in Resources */,
+				E219A8FD27264633005D87E5 /* loca3.jpg in Resources */,
 				E219A8E727263444005D87E5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,14 +303,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B24STM79MS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = detectLocation/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Detect Location";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Allow to use location while app in use?";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow location updates while in background and using app?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -319,14 +336,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B24STM79MS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = detectLocation/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Detect Location";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Allow to use location while app in use?";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow location updates while in background and using app?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

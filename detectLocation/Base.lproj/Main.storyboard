@@ -1,24 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="detectLocation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loca.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="3yN-If-giB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longtitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iy9-RG-MMg">
+                                <rect key="frame" x="20" y="239.5" width="374" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vi0-kI-Zbq">
+                                <rect key="frame" x="20" y="309" width="374" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vi5-tT-Qex">
+                                <rect key="frame" x="112" y="613" width="190" height="40"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Detect Location">
+                                            <attributes>
+                                                <font key="NSFont" size="22" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="detectLocationClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rk8-VM-8jO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RqT-TI-phS">
+                                <rect key="frame" x="104" y="71" width="206" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="BAm-HI-ShX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZK-nn-lX9">
+                                <rect key="frame" x="20" y="165" width="374" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RqT-TI-phS" firstAttribute="centerX" secondItem="Vi5-tT-Qex" secondAttribute="centerX" id="1Rl-Xz-5mv"/>
+                            <constraint firstItem="3yN-If-giB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="3c2-1s-1dr"/>
+                            <constraint firstItem="3yN-If-giB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6J9-pG-YsQ"/>
+                            <constraint firstItem="RqT-TI-phS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="104" id="98t-in-XeP"/>
+                            <constraint firstItem="RqT-TI-phS" firstAttribute="centerX" secondItem="vi0-kI-Zbq" secondAttribute="centerX" id="DzJ-wk-wYo"/>
+                            <constraint firstItem="ZZK-nn-lX9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Iem-Og-PyN"/>
+                            <constraint firstItem="iy9-RG-MMg" firstAttribute="leading" secondItem="vi0-kI-Zbq" secondAttribute="leading" id="N9V-38-KhP"/>
+                            <constraint firstItem="RqT-TI-phS" firstAttribute="centerX" secondItem="ZZK-nn-lX9" secondAttribute="centerX" id="Nxo-gj-sIn"/>
+                            <constraint firstItem="RqT-TI-phS" firstAttribute="centerX" secondItem="3yN-If-giB" secondAttribute="centerX" id="OQT-48-D7L"/>
+                            <constraint firstItem="vi0-kI-Zbq" firstAttribute="top" secondItem="iy9-RG-MMg" secondAttribute="bottom" constant="48" id="R4Q-Iy-Xpz"/>
+                            <constraint firstItem="iy9-RG-MMg" firstAttribute="top" secondItem="ZZK-nn-lX9" secondAttribute="bottom" constant="53" id="TGA-9g-D2A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZZK-nn-lX9" secondAttribute="trailing" constant="20" id="WiX-tq-Tz5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vi5-tT-Qex" secondAttribute="bottom" constant="209" id="XkL-rL-TZI"/>
+                            <constraint firstItem="3yN-If-giB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YVP-fH-Q9L"/>
+                            <constraint firstItem="RqT-TI-phS" firstAttribute="centerX" secondItem="iy9-RG-MMg" secondAttribute="centerX" id="ZTJ-bA-jMc"/>
+                            <constraint firstItem="RqT-TI-phS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="27" id="a4a-hl-q05"/>
+                            <constraint firstItem="iy9-RG-MMg" firstAttribute="leading" secondItem="ZZK-nn-lX9" secondAttribute="leading" id="blY-ka-kw8"/>
+                            <constraint firstItem="ZZK-nn-lX9" firstAttribute="top" secondItem="RqT-TI-phS" secondAttribute="bottom" constant="41" id="jNJ-LJ-U6h"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="vi0-kI-Zbq" id="FBh-sE-plN"/>
+                        <outlet property="latitudeLabel" destination="ZZK-nn-lX9" id="N43-gK-LUr"/>
+                        <outlet property="longtitudeLabel" destination="iy9-RG-MMg" id="NRY-kV-TVP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-506" y="78"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="loca.jpg" width="1473" height="1105"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
